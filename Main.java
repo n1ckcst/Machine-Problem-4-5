@@ -13,7 +13,7 @@ public class Main {
         System.out.print("Name: ");
         String student1Name = scanner.nextLine();
 
-        int student1Age;                                                                            // REGULAR EXCEPTION HANDLING: STUDENT1AGE
+        int student1Age; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -34,12 +34,34 @@ public class Main {
             }
         }
 
-        System.out.print("Gender (M/F): ");
-        char student1Gender = Character.toUpperCase(scanner.next().charAt(0));
+        char student1Gender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
+        while (true) { // DIGITS are not allowed; ONLY LETTERS
+            System.out.print("Gender (M/F): ");
 
+            try {
+                student1Gender = scanner.next().charAt(0); // Read once
+                if (!Character.isLetter(student1Gender)) { // Check if input is exactly one letter (not a digit or
+                                                           // multiple characters)
+                    throw new InputMismatchException(); // Not a letter
+                }
+                // Convert to uppercase and store
+                student1Gender = Character.toUpperCase(student1Gender);
+                break; // Exit loop when valid
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F).");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please try again.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General exception occurred: ");
+            } finally {
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
 
-        double student1Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT1GRADE
-        while (true){
+        double student1Grade; // REGULAR EXCEPTION HANDLING: STUDENT1GRADE
+        while (true) {
             try {
                 System.out.print("Grade: ");
                 student1Grade = scanner.nextDouble();
@@ -66,7 +88,7 @@ public class Main {
         System.out.print("Name: ");
         String student2Name = scanner.nextLine();
 
-        int student2Age;                                                                            // REGULAR EXCEPTION HANDLING: STUDENT2AGE
+        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT2AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -87,11 +109,34 @@ public class Main {
             }
         }
 
-        System.out.print("Gender (M/F): ");
-        char student2Gender = Character.toUpperCase(scanner.next().charAt(0));
+        char student2Gender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
+        while (true) { // DIGITS are not allowed; ONLY LETTERS
+            System.out.print("Gender (M/F): ");
 
-        double student2Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT2GRADE
-        while (true){
+            try {
+                student2Gender = scanner.next().charAt(0); // Read once
+                if (!Character.isLetter(student2Gender)) { // Check if input is exactly one letter (not a digit or
+                                                           // multiple characters)
+                    throw new InputMismatchException(); // Not a letter
+                }
+                // Convert to uppercase and store
+                student2Gender = Character.toUpperCase(student2Gender);
+                break; // Exit loop when valid
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F).");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please try again.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General exception occurred: ");
+            } finally {
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
+
+        double student2Grade; // REGULAR EXCEPTION HANDLING: STUDENT2GRADE
+        while (true) {
             try {
                 System.out.print("Grade: ");
                 student2Grade = scanner.nextDouble();
@@ -118,7 +163,7 @@ public class Main {
         System.out.print("Name: ");
         String teacherName = scanner.nextLine();
 
-        int teacherAge;                                                                            // REGULAR EXCEPTION HANDLING: TEACHER AGE
+        int teacherAge; // REGULAR EXCEPTION HANDLING: TEACHER AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -139,12 +184,34 @@ public class Main {
             }
         }
 
-        System.out.print("Gender (M/F): ");
-        char teacherGender = Character.toUpperCase(scanner.next().charAt(0));
+        char teacherGender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
+        while (true) { // DIGITS are not allowed; ONLY LETTERS
+            System.out.print("Gender (M/F): ");
 
+            try {
+                teacherGender = scanner.next().charAt(0); // Read once
+                if (!Character.isLetter(teacherGender)) { // Check if input is exactly one letter (not a digit or
+                                                          // multiple characters)
+                    throw new InputMismatchException(); // Not a letter
+                }
+                // Convert to uppercase and store
+                teacherGender = Character.toUpperCase(teacherGender);
+                break; // Exit loop when valid
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F).");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please try again.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General exception occurred: ");
+            } finally {
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
 
-        double teacherSalary;                                                   // REGULAR EXCEPTION HANDLING: TEACHER SALARY
-        while (true){
+        double teacherSalary; // REGULAR EXCEPTION HANDLING: TEACHER SALARY
+        while (true) {
             try {
                 System.out.print("Salary: ");
                 teacherSalary = scanner.nextDouble();
