@@ -37,10 +37,27 @@ public class Main {
         System.out.print("Gender (M/F): ");
         char student1Gender = scanner.next().charAt(0);
 
-        System.out.print("Grade: ");
-        double student1Grade = scanner.nextDouble();
 
-        scanner.nextLine();
+        double student1Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT1GRADE
+        while (true){
+            try {
+                System.out.print("Grade: ");
+                student1Grade = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for grade.");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please enter a valid number for grade.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General Exception occured: ");
+            } finally {
+                // System.out.println("You have entered the grade field.");
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
+
         Student student1 = new Student(student1Name, student1Age, student1Gender, student1Grade);
 
         System.out.println("===================================");
@@ -73,11 +90,28 @@ public class Main {
         System.out.print("Gender (M/F): ");
         char student2Gender = scanner.next().charAt(0);
 
-        System.out.print("Grade: ");
-        double student2Grade = scanner.nextDouble();
+        double student2Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT2GRADE
+        while (true){
+            try {
+                System.out.print("Grade: ");
+                student2Grade = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for grade.");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please enter a valid number for grade.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General Exception occured: ");
+            } finally {
+                // System.out.println("You have entered the grade field.");
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
 
-        scanner.nextLine();
         Student student2 = new Student(student2Name, student2Age, student2Gender, student2Grade);
+
         System.out.println("===================================");
 
         System.out.println("Enter Teacher Details:");
@@ -108,8 +142,27 @@ public class Main {
         System.out.print("Gender (M/F): ");
         char teacherGender = scanner.next().charAt(0);
 
-        System.out.print("Salary: ");
-        double teacherSalary = scanner.nextDouble();
+
+        double teacherSalary;                                                   // REGULAR EXCEPTION HANDLING: TEACHER SALARY
+        while (true){
+            try {
+                System.out.print("Salary: ");
+                teacherSalary = scanner.nextDouble();
+                break;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for salary.");
+            } catch (NullPointerException e) {
+                System.out.println("Input cannot be null. Please enter a valid number for salary.");
+            } catch (RuntimeException e) {
+                System.out.println("An unexpected error occurred: ");
+            } catch (Exception e) {
+                System.out.println("General Exception occured: ");
+            } finally {
+                // System.out.println("You have entered the salary field.");
+                scanner.nextLine(); // Clear the invalid input
+            }
+        }
+
         Teacher teacher = new Teacher(teacherName, teacherAge, teacherGender, teacherSalary);
         System.out.println("===================================");
 
