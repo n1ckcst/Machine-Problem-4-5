@@ -35,7 +35,7 @@ public class Main {
         }
 
         System.out.print("Gender (M/F): ");
-        char student1Gender = scanner.next().charAt(0);
+        char student1Gender = Character.toUpperCase(scanner.next().charAt(0));
 
 
         double student1Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT1GRADE
@@ -88,7 +88,7 @@ public class Main {
         }
 
         System.out.print("Gender (M/F): ");
-        char student2Gender = scanner.next().charAt(0);
+        char student2Gender = Character.toUpperCase(scanner.next().charAt(0));
 
         double student2Grade;                                                  // REGULAR EXCEPTION HANDLING: STUDENT2GRADE
         while (true){
@@ -140,7 +140,7 @@ public class Main {
         }
 
         System.out.print("Gender (M/F): ");
-        char teacherGender = scanner.next().charAt(0);
+        char teacherGender = Character.toUpperCase(scanner.next().charAt(0));
 
 
         double teacherSalary;                                                   // REGULAR EXCEPTION HANDLING: TEACHER SALARY
