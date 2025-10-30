@@ -21,3 +21,6 @@ Main.java
 **MACHINE PROBLEM 5**
 > validation
 > implementations: user-defined & regular exceptions
+
+**DOCUMENTATION/QA:**
+https://docs.google.com/document/d/1ABr0HoxMoIm9eQP9clCFjdGunICCUol1X74pEKal0WA/edit?usp=sharing
