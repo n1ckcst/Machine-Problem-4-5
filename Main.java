@@ -2,6 +2,22 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/*REGULAR exception hierchy based kay sir
+ * - null
+ * - mismatch
+ * - runtime
+ * - general
+ * - runtime
+ * 
+ * ADDITIONAL USER-DEFINED EXCEPTIONS
+ * - illegal
+ * - null
+ * - mismatch
+ * - runtime
+ * - general
+ * - runtime
+ */
+
 public class Main {
 
     public static void main(String[] args) {
@@ -24,17 +40,17 @@ public class Main {
                 }
                 break;
 
-            } catch (IllegalArgumentException e) {
-                System.out.println("Age is invalid. It must be between 1 and 110.");
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: STUDENT1AGE (MISMATCH LETTERS/CHARACTERS)
-            } catch (NullPointerException e) {
+            }catch (IllegalArgumentException e) {
+                System.out.println("Age is invalid. It must be between 1 and 110."); // USER-DEFINED EXCEPTION HANDLING: STUDENT1AGE
+            }catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid integer for age.");
-            } catch (RuntimeException e) {
+            }catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: STUDENT1AGE (MISMATCH LETTERS/CHARACTERS)
+            }catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
-            } catch (Exception e) {
+            }catch (Exception e) {
                 System.out.println("General Exception occured: ");
-            } finally {
+            }finally {
                 // System.out.println("You have entered the age field.");
                 scanner.nextLine(); // Clear the invalid input
             }
@@ -54,10 +70,11 @@ public class Main {
                 
                 student1Gender = Character.toUpperCase(student1Gender); // Convert to uppercase and store
                 break; // Exit loop when valid
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter only a single letter (M or F)."); // REGULAR EXCEPTION HANDLING: STUDENT1GENDER (MISMATCH DIGITS/CHARACTERS)
-            } catch (NullPointerException e) {
+            
+            } catch (NullPointerException e) { // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
                 System.out.println("Input cannot be null. Please try again.");
+            }catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F)."); // USER DEFINED EXCEPTION HANDLING: STUDENT1GENDER (MISMATCH DIGITS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -78,10 +95,10 @@ public class Main {
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println("Grade is invalid. It must be between 0.0 and 100.0."); // USER-DEFINED EXCEPTION HANDLING: STUDENT1GRADE
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid number for grade."); // REGULAR EXCEPTION HANDLING: STUDENT1GRADE (MISMATCH LETTERS/CHARACTERS)
             } catch (NullPointerException e) { 
                 System.out.println("Input cannot be null. Please enter a valid number for grade.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for grade."); // REGULAR EXCEPTION HANDLING: STUDENT1GRADE (MISMATCH LETTERS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -113,10 +130,10 @@ public class Main {
 
             } catch (IllegalArgumentException e) {
                 System.out.println("Age is invalid. It must be between 1 and 110."); // USER-DEFINED EXCEPTION HANDLING: STUDENT2AGE
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: STUDENT1AGE
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid integer for age.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: STUDENT1AGE
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -141,10 +158,11 @@ public class Main {
         
                 student2Gender = Character.toUpperCase(student2Gender); // Convert to uppercase and store
                 break; // Exit loop when valid
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter only a single letter (M or F)."); // REGULAR EXCEPTION HANDLING: STUDENT2GENDER (MISMATCH DIGITS/CHARACTERS)
+
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please try again.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F)."); // REGULAR EXCEPTION HANDLING: STUDENT2GENDER (MISMATCH DIGITS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -165,10 +183,10 @@ public class Main {
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println("Grade is invalid. It must be between 0.0 and 100.0.");
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid number for grade."); // REGULAR EXCEPTION HANDLING: STUDENT2GRADE (MISMATCH LETTERS/CHARACTERS)
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid number for grade.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for grade."); // REGULAR EXCEPTION HANDLING: STUDENT2GRADE (MISMATCH LETTERS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -200,10 +218,10 @@ public class Main {
 
             } catch (IllegalArgumentException e) {
                 System.out.println("Age is invalid. It must be between 1 and 110."); // USER-DEFINED EXCEPTION HANDLING: TEACHERAGE
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: TEACHERAGE (MISMATCH LETTERS/CHARACTERS)
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid integer for age.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid integer for age."); // REGULAR EXCEPTION HANDLING: TEACHERAGE (MISMATCH LETTERS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -229,10 +247,10 @@ public class Main {
                 teacherGender = Character.toUpperCase(teacherGender); // Convert to uppercase and store
                 break; // Exit loop when valid
 
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter only a single letter (M or F)."); //USER-DEFINED EXCEPTION HANDLING: TEACHERGENDER (MISMATCH DIGITS/CHARACTERS)
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please try again.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter only a single letter (M or F)."); //USER-DEFINED EXCEPTION HANDLING: TEACHERGENDER (MISMATCH DIGITS/CHARACTERS)
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
@@ -253,10 +271,10 @@ public class Main {
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println("Salary is invalid. It must not be negative."); // USER-DEFINED EXCEPTION HANDLING: TEACHER SALARY
-            } catch (InputMismatchException e) {
-                System.out.println("Invalid input. Please enter a valid number for salary.");
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid number for salary.");
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input. Please enter a valid number for salary.");
             } catch (RuntimeException e) {
                 System.out.println("An unexpected error occurred: ");
             } catch (Exception e) {
