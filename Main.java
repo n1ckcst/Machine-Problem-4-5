@@ -19,7 +19,13 @@ public class Main {
 
             try {
                 student1Age = scanner.nextInt();
+                if (student1Age < 1 || student1Age > 110) {
+                    throw new IllegalArgumentException(); // AGE VALIDATION: must be between 1 and 110
+                }
                 break;
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Age is invalid. It must be between 1 and 110.");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid integer for age.");
             } catch (NullPointerException e) {
@@ -88,13 +94,19 @@ public class Main {
         System.out.print("Name: ");
         String student2Name = scanner.nextLine();
 
-        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT2AGE
+        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
         while (true) {
             System.out.print("Age: ");
 
             try {
                 student2Age = scanner.nextInt();
+                if (student2Age < 1 || student2Age > 110) {
+                    throw new IllegalArgumentException(); // AGE VALIDATION: must be between 1 and 110
+                }
                 break;
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Age is invalid. It must be between 1 and 110.");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid integer for age.");
             } catch (NullPointerException e) {
@@ -163,13 +175,19 @@ public class Main {
         System.out.print("Name: ");
         String teacherName = scanner.nextLine();
 
-        int teacherAge; // REGULAR EXCEPTION HANDLING: TEACHER AGE
+        int teacherAge; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
         while (true) {
             System.out.print("Age: ");
 
             try {
                 teacherAge = scanner.nextInt();
+                if (teacherAge < 1 || teacherAge > 110) {
+                    throw new IllegalArgumentException(); // AGE VALIDATION: must be between 1 and 110
+                }
                 break;
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Age is invalid. It must be between 1 and 110.");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid integer for age.");
             } catch (NullPointerException e) {
