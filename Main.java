@@ -71,8 +71,14 @@ public class Main {
             try {
                 System.out.print("Grade: ");
                 student1Grade = scanner.nextDouble();
+                if (student1Grade < 0.0 || student1Grade > 100.0) { // USER-DEFINED EXCEPTION
+                    throw new IllegalArgumentException(); // GRADE VALIDATION: must be between 0.0 and 100.0
+                }
                 break;
-            } catch (InputMismatchException e) {
+            } catch (IllegalArgumentException e) {
+                System.out.println("Grade is invalid. It must be between 0.0 and 100.0.");
+            }
+            catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid number for grade.");
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid number for grade.");
@@ -94,7 +100,7 @@ public class Main {
         System.out.print("Name: ");
         String student2Name = scanner.nextLine();
 
-        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT2AGE
+        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -121,7 +127,7 @@ public class Main {
             }
         }
 
-        char student2Gender; // REGULAR EXCEPTION HANDLING: STUDENT2GENDER
+        char student2Gender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
         while (true) { // DIGITS are not allowed; ONLY LETTERS
             System.out.print("Gender (M/F): ");
 
@@ -152,8 +158,14 @@ public class Main {
             try {
                 System.out.print("Grade: ");
                 student2Grade = scanner.nextDouble();
-                break;
-            } catch (InputMismatchException e) {
+                if (student2Grade < 0.0 || student2Grade > 100.0) { // USER-DEFINED EXCEPTION
+                    throw new IllegalArgumentException(); // GRADE VALIDATION: must be between 0.0 and 100.0
+                }
+            break;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Grade is invalid. It must be between 0.0 and 100.0.");
+            }
+            catch (InputMismatchException e) {
                 System.out.println("Invalid input. Please enter a valid number for grade.");
             } catch (NullPointerException e) {
                 System.out.println("Input cannot be null. Please enter a valid number for grade.");
@@ -175,7 +187,7 @@ public class Main {
         System.out.print("Name: ");
         String teacherName = scanner.nextLine();
 
-        int teacherAge; // REGULAR EXCEPTION HANDLING: teacherAge
+        int teacherAge; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -202,7 +214,7 @@ public class Main {
             }
         }
 
-        char teacherGender; // REGULAR EXCEPTION HANDLING: teacherGender
+        char teacherGender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
         while (true) { // DIGITS are not allowed; ONLY LETTERS
             System.out.print("Gender (M/F): ");
 
@@ -276,4 +288,3 @@ public class Main {
 
     }
 }
-
