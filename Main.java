@@ -94,7 +94,7 @@ public class Main {
         System.out.print("Name: ");
         String student2Name = scanner.nextLine();
 
-        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
+        int student2Age; // REGULAR EXCEPTION HANDLING: STUDENT2AGE
         while (true) {
             System.out.print("Age: ");
 
@@ -121,7 +121,7 @@ public class Main {
             }
         }
 
-        char student2Gender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
+        char student2Gender; // REGULAR EXCEPTION HANDLING: STUDENT2GENDER
         while (true) { // DIGITS are not allowed; ONLY LETTERS
             System.out.print("Gender (M/F): ");
 
@@ -175,7 +175,7 @@ public class Main {
         System.out.print("Name: ");
         String teacherName = scanner.nextLine();
 
-        int teacherAge; // REGULAR EXCEPTION HANDLING: STUDENT1AGE
+        int teacherAge; // REGULAR EXCEPTION HANDLING: teacherAge
         while (true) {
             System.out.print("Age: ");
 
@@ -202,7 +202,7 @@ public class Main {
             }
         }
 
-        char teacherGender; // REGULAR EXCEPTION HANDLING: STUDENT1GENDER
+        char teacherGender; // REGULAR EXCEPTION HANDLING: teacherGender
         while (true) { // DIGITS are not allowed; ONLY LETTERS
             System.out.print("Gender (M/F): ");
 
@@ -276,3 +276,4 @@ public class Main {
 
     }
 }
+
